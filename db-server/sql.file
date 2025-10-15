@@ -1,0 +1,23 @@
+-- Create database
+CREATE DATABASE studentdb;
+
+-- Create a user (change password as needed)
+CREATE USER 'avinash'@'10.0.16.12' IDENTIFIED BY 'avinash@123';
+
+-- Grant all privileges on the database
+GRANT ALL PRIVILEGES ON mydb.* TO 'avinash'@'10.0.16.12';
+
+-- Apply privileges
+FLUSH PRIVILEGES;
+
+USE studentdb;
+
+CREATE TABLE students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    gender ENUM('Male', 'Female', 'Other') NOT NULL,
+    course VARCHAR(50) NOT NULL,
+    dob DATE NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
