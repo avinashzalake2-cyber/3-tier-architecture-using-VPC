@@ -140,4 +140,4 @@ It does not use RDS, ALB, or other managed services — just EC2 instances in se
 ---
 
 ## 🏁 Author
-**Arkan Tandel**
+**Avinash zalake**
